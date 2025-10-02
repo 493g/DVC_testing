@@ -16,6 +16,9 @@ data = json.loads(data_json)
 # Convert to DataFrame
 df = pd.DataFrame(data)
 
+# Append a new row (dummy entry)
+df.loc[len(df)] = {"name": "David", "age": 35, "city": "Bangalore"}
+
 # Print DataFrame
 print(df)
 
